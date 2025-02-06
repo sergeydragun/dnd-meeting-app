@@ -1,0 +1,24 @@
+@use '@angular/material' as mat;
+
+.base-layout-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.base-layout-card {
+  @include mat.card-overrides((
+    elevated-container-color: white,
+  ));
+    height: 98%;
+    width: 98%;
+}
+
+.content {
+  height: 100%;
+}
+
+.layout-toolbar {
+    border-radius: 3rem;
+}

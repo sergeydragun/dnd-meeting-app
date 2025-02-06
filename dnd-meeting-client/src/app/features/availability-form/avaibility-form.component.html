@@ -1,0 +1,45 @@
+<mat-card class="availability-form">
+    <mat-chip-listbox multiple class="time-chips">
+      <mat-chip *ngFor="let time of freeTimes" removable (removed)="removeTime(time)">
+        {{ time.startTime }} - {{ time.endTime }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-listbox>
+
+    <mat-form-field>
+      <input matInput class="timepicker" [ngxTimepicker]="picker" [format]=24 placeholder="End" [(ngModel)]="startTime">
+    </mat-form-field>
+    
+    
+    <ngx-material-timepicker 
+        #picker
+        [enableKeyboardInput]=true>
+    </ngx-material-timepicker>
+
+    <div class="time-inputs">
+      <mat-form-field appearance="outline">
+        <mat-label>Начало</mat-label>
+        <input matInput
+                [matTimepicker]="startTimepicker"
+                [(ngModel)]="startTime"
+                type="time-24">
+        <mat-timepicker #startTimepicker/>
+        <mat-timepicker-toggle matIconSuffix [for]="startTimepicker"/>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Конец</mat-label>
+        <input matInput
+                [matTimepicker]="endTimepicker"
+                [(ngModel)]="endTime">
+        <mat-timepicker #endTimepicker/>
+        <mat-timepicker-toggle matIconSuffix [for]="endTimepicker"/>
+      </mat-form-field>
+    </div>
+  
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="addTime()">Добавить время</button>
+      <button mat-raised-button color="accent" (click)="submit()">Отправить</button>
+    </div>
+  </mat-card>
+  

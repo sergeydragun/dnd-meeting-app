@@ -1,0 +1,11 @@
+<div class="fullcalendar-container">
+    <tui-calendar
+    [value]="selectedDay"
+    (dayClick)="onDayClick($event)"
+/>
+</div>
+
+<app-availbility-form *ngIf="selectedDayAsDate != null"
+                      [selectedDate]="selectedDayAsDate">
+
+</app-availbility-form>

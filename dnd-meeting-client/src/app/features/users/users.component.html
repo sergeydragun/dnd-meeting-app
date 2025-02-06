@@ -1,0 +1,17 @@
+<mat-card class="user-list">
+  <h1>Выбери или добавь себя</h1>
+  <mat-card *ngFor="let user of users" class="user-card">
+    <mat-card-content class="d-flex flex-row justify-content-between p-0">
+      <span class="d-flex justify-content-center align-items-center fs-2">{{ user.name }}</span>
+      <button mat-stroked-button (click)="goToCalendar(user.id)">Перейти</button>
+    </mat-card-content>
+  </mat-card>
+
+  <form class="form" (ngSubmit)="createPerson()">
+    <mat-form-field>
+      <mat-label>твое имя (или не имя)</mat-label>
+      <input matInput name="newUsername" [(ngModel)]="newUsername" required/>
+    </mat-form-field>
+    <button type="submit" mat-flat-button>Тык</button>
+  </form>
+</mat-card>
