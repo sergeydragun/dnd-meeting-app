@@ -1,0 +1,6 @@
+﻿services:
+  dndmeetingapi:
+    image: dndmeetingapi
+    build:
+      context: .
+      dockerfile: DndMeetingAPI/Dockerfile

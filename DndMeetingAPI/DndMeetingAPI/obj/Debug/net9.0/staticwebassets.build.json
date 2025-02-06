@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "qc6vLyGg4NV13BSviwlRY1vqn9Pj+gGHiI2txZjmQBQ=",
+  "Source": "DndMeetingAPI",
+  "BasePath": "_content/DndMeetingAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
