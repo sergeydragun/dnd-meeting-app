@@ -1,0 +1,62 @@
+# ---- Общие исключения для всех проектов ----
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Исключения для .NET (ASP.NET Core) ----
+# Бинарные файлы и кэш
+bin/
+obj/
+**/Backup/
+**/TestResults/
+**/packages/
+
+# Конфигурационные файлы
+appsettings*.json
+secrets.json
+
+# Rider / VS Code / Visual Studio
+.idea/
+.vscode/
+*.suo
+*.user
+*.csproj.user
+
+# NuGet
+*.nupkg
+project.lock.json
+
+# Кэш сборки
+**/node_modules/
+**/.angular/
+**/dist/
+**/out-tsc/
+**/.turbo/
+
+# Angular специфичные файлы
+.angular/cache/
+.angular/config.json
+
+# Браузерные кэши и временные файлы
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Кэш Cypress (если используются тесты)
+cypress/screenshots/
+cypress/videos/
+
+# Docker файлы (если используется)
+.dockerignore
+.env
+
+# Git специфичные файлы
+*.orig
+*.rej
+
+# Дополнительно для CI/CD
+/.github/workflows/
+/.idea/
+/.vs/
